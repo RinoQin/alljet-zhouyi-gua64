@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.alljet.gua64.Zhouyi64Gua">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FormLayout">
+    <rowspec value="center:14px:noGrow"/>
+    <rowspec value="top:7dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:d:grow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:d:grow"/>
+    <colspec value="fill:max(d;4px):noGrow"/>
+    <colspec value="fill:349px:grow"/>
+    <constraints>
+      <xy x="0" y="0" width="425" height="400"/>
+    </constraints>
+    <properties>
+      <alignmentX value="0.0"/>
+      <alignmentY value="0.0"/>
+      <background color="-16777216"/>
+      <foreground color="-1"/>
+      <maximumSize width="300" height="400"/>
+      <minimumSize width="300" height="400"/>
+      <preferredSize width="300" height="400"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="a0cde" class="javax.swing.JLabel" binding="chooseLable">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <text value="请选择游戏模式"/>
+        </properties>
+      </component>
+      <component id="74bf5" class="javax.swing.JButton" binding="btn1">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms top="0" left="50" bottom="0" right="50"/>
+        </constraints>
+        <properties>
+          <background color="-11300969"/>
+          <enabled value="true"/>
+          <foreground color="-1"/>
+          <text value="卦名问答"/>
+        </properties>
+      </component>
+      <component id="4ed2c" class="javax.swing.JTextField" binding="questionText">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <editable value="false"/>
+          <enabled value="true"/>
+          <foreground color="-1"/>
+          <text value="题目："/>
+        </properties>
+      </component>
+      <component id="d2754" class="javax.swing.JButton" binding="btn2">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms top="0" left="50" bottom="0" right="50"/>
+        </constraints>
+        <properties>
+          <background color="-11300969"/>
+          <foreground color="-1"/>
+          <text value="卦爻问答"/>
+        </properties>
+      </component>
+      <component id="ae9a0" class="javax.swing.JTextField" binding="ansText">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <editable value="true"/>
+          <enabled value="false"/>
+          <foreground color="-1"/>
+          <text value="请输入答案"/>
+        </properties>
+      </component>
+      <component id="a8047" class="javax.swing.JButton" binding="submit">
+        <constraints>
+          <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms top="0" left="50" bottom="0" right="50" defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <actionCommand value="提交"/>
+          <background color="-11300969"/>
+          <enabled value="false"/>
+          <foreground color="-1"/>
+          <text value="提交"/>
+        </properties>
+      </component>
+      <component id="33789" class="javax.swing.JTextField" binding="result">
+        <constraints>
+          <grid row="12" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <editable value="false"/>
+          <foreground color="-1"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="5e639" class="javax.swing.JTextArea" binding="desc">
+        <constraints>
+          <grid row="16" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <editable value="false"/>
+          <foreground color="-1"/>
+          <lineWrap value="true"/>
+          <text value="游戏说明：本游戏有看卦名答卦爻、看卦爻答卦名两个模式两个模式。每个模式有10题，每题10分，每个游戏模式总分都为100分。10道题目将从64卦不容易记忆的56卦中随机抽取，一次游戏抽取题目保证不重复，祝您游戏愉快！"/>
+        </properties>
+      </component>
+      <component id="4a46b" class="javax.swing.JTextArea" binding="allResult">
+        <constraints>
+          <grid row="14" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <editable value="false"/>
+          <enabled value="true"/>
+          <foreground color="-1"/>
+          <text value="成绩！"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

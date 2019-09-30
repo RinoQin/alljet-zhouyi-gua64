@@ -13,6 +13,7 @@ import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.ResourceBundle;
 
 public class Zhouyi64Gua {
     private JPanel panel1;
@@ -37,7 +38,7 @@ public class Zhouyi64Gua {
     List<Integer> containIndex = new ArrayList<Integer>(Constants.questionCount);
     private int askRight = 0;
     private int askWrong = 0;
-    private static final int score = 10;
+    private static final int score = (Constants.fullScore / Constants.questionCount);
     private int totalScore = 0;
 
     public Zhouyi64Gua() {
@@ -74,7 +75,6 @@ public class Zhouyi64Gua {
         ansText.addKeyListener(new KeyListener() {
             public void keyPressed(KeyEvent e) {
                 if (e.getSource() == ansText) {
-                    System.out.println("按了回车键");
                     if (e.getKeyCode() == KeyEvent.VK_ENTER) {//判断按下的键是否是回车键
                         checkAnswer(ansText.getText());
                     }
@@ -158,7 +158,7 @@ public class Zhouyi64Gua {
      */
     private void $$$setupUI$$$() {
         panel1 = new JPanel();
-        panel1.setLayout(new FormLayout("fill:max(d;4px):noGrow,fill:349px:grow", "center:14px:noGrow,top:7dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:d:grow,top:4dlu:noGrow,center:d:grow"));
+        panel1.setLayout(new FormLayout("fill:max(d;4px):noGrow,fill:349px:grow", "center:22px:noGrow,top:7dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:d:grow,top:4dlu:noGrow,center:d:grow"));
         panel1.setAlignmentX(0.0f);
         panel1.setAlignmentY(0.0f);
         panel1.setBackground(new Color(-16777216));
@@ -167,6 +167,8 @@ public class Zhouyi64Gua {
         panel1.setMinimumSize(new Dimension(300, 400));
         panel1.setPreferredSize(new Dimension(300, 400));
         chooseLable = new JLabel();
+        Font chooseLableFont = this.$$$getFont$$$("MingLiU", Font.BOLD, 15, chooseLable.getFont());
+        if (chooseLableFont != null) chooseLable.setFont(chooseLableFont);
         chooseLable.setForeground(new Color(-1));
         chooseLable.setText("请选择游戏模式");
         CellConstraints cc = new CellConstraints();
@@ -212,17 +214,38 @@ public class Zhouyi64Gua {
         desc = new JTextArea();
         desc.setBackground(new Color(-16777216));
         desc.setEditable(false);
-        desc.setForeground(new Color(-1));
+        desc.setForeground(new Color(-12938));
         desc.setLineWrap(true);
-        desc.setText("游戏说明：本游戏有看卦名答卦爻、看卦爻答卦名两个模式两个模式。每个模式有10题，每题10分，每个游戏模式总分都为100分。10道题目将从64卦不容易记忆的56卦中随机抽取，一次游戏抽取题目保证不重复，祝您游戏愉快！");
+        desc.setText(ResourceBundle.getBundle("config").getString("gram_desc"));
         panel1.add(desc, cc.xy(2, 17, CellConstraints.FILL, CellConstraints.FILL));
         allResult = new JTextArea();
         allResult.setBackground(new Color(-16777216));
         allResult.setEditable(false);
         allResult.setEnabled(true);
         allResult.setForeground(new Color(-1));
+        allResult.setLineWrap(false);
         allResult.setText("成绩！");
+        allResult.setWrapStyleWord(false);
         panel1.add(allResult, cc.xy(2, 15, CellConstraints.FILL, CellConstraints.FILL));
+    }
+
+    /**
+     * @noinspection ALL
+     */
+    private Font $$$getFont$$$(String fontName, int style, int size, Font currentFont) {
+        if (currentFont == null) return null;
+        String resultName;
+        if (fontName == null) {
+            resultName = currentFont.getName();
+        } else {
+            Font testFont = new Font(fontName, Font.PLAIN, 10);
+            if (testFont.canDisplay('a') && testFont.canDisplay('1')) {
+                resultName = fontName;
+            } else {
+                resultName = currentFont.getName();
+            }
+        }
+        return new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
     }
 
     /**

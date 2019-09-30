@@ -9,4 +9,7 @@ public class Constants {
             "雷天","雷地","雷风","雷火","雷水","雷山","雷泽","火天","火地","火风","火雷","火水","火山","火泽","水天","水地","水风","水雷","水火","水山","水泽","山天","山地","山风","山雷","山火","山水","山泽","泽天","泽地","泽风","泽雷","泽火","泽水","泽山"};
 
     public static int questionCount = Integer.valueOf(PropertyUtil.getProperty("question_count"));
+
+    public static int fullScore = Integer.valueOf(PropertyUtil.getProperty("full_score"));
+
 }

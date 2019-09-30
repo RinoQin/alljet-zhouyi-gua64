@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.alljet.gua64.Zhouyi64Gua">
   <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FormLayout">
-    <rowspec value="center:14px:noGrow"/>
+    <rowspec value="center:22px:noGrow"/>
     <rowspec value="top:7dlu:noGrow"/>
     <rowspec value="center:max(d;4px):noGrow"/>
     <rowspec value="top:4dlu:noGrow"/>
@@ -40,6 +40,7 @@
           <forms defaultalign-horz="false" defaultalign-vert="false"/>
         </constraints>
         <properties>
+          <font name="MingLiU" size="15" style="1"/>
           <foreground color="-1"/>
           <text value="请选择游戏模式"/>
         </properties>
@@ -134,9 +135,9 @@
         <properties>
           <background color="-16777216"/>
           <editable value="false"/>
-          <foreground color="-1"/>
+          <foreground color="-12938"/>
           <lineWrap value="true"/>
-          <text value="游戏说明：本游戏有看卦名答卦爻、看卦爻答卦名两个模式两个模式。每个模式有10题，每题10分，每个游戏模式总分都为100分。10道题目将从64卦不容易记忆的56卦中随机抽取，一次游戏抽取题目保证不重复，祝您游戏愉快！"/>
+          <text resource-bundle="config" key="gram_desc"/>
         </properties>
       </component>
       <component id="4a46b" class="javax.swing.JTextArea" binding="allResult">
@@ -151,7 +152,9 @@
           <editable value="false"/>
           <enabled value="true"/>
           <foreground color="-1"/>
+          <lineWrap value="false"/>
           <text value="成绩！"/>
+          <wrapStyleWord value="false"/>
         </properties>
       </component>
     </children>

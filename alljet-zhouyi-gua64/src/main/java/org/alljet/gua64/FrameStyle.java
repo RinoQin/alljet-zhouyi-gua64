@@ -22,6 +22,7 @@ public class FrameStyle {
         jFrame.setSize(400,400);
         //设置窗体的大小为300*200像素大小
         jFrame.setResizable(false);
+
         try {
             //File file = new File(this.getClass().getResource("/20190930102808.png").getPath());
             Image image = ImageIO.read(new FileInputStream(this.getClass().getResource("/20190930102808.png").getPath()));
@@ -30,5 +31,15 @@ public class FrameStyle {
             e.printStackTrace();
         }
 
+    }
+
+    public int getScreenWidth(){
+        int screenWidth = (int)java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+        return screenWidth;
+    }
+
+    public int getScreenHeight(){
+        int screenHeight = (int)java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
+        return screenHeight;
     }
 }

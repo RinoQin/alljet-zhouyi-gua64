@@ -163,9 +163,9 @@ public class Zhouyi64Gua {
         panel1.setAlignmentY(0.0f);
         panel1.setBackground(new Color(-16777216));
         panel1.setForeground(new Color(-1));
-        panel1.setMaximumSize(new Dimension(300, 400));
+        panel1.setMaximumSize(new Dimension(600, 800));
         panel1.setMinimumSize(new Dimension(300, 400));
-        panel1.setPreferredSize(new Dimension(300, 400));
+        panel1.setPreferredSize(new Dimension(600, 800));
         chooseLable = new JLabel();
         Font chooseLableFont = this.$$$getFont$$$("MingLiU", Font.BOLD, 15, chooseLable.getFont());
         if (chooseLableFont != null) chooseLable.setFont(chooseLableFont);

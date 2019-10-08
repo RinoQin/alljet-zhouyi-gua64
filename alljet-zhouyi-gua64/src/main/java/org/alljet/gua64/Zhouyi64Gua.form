@@ -28,9 +28,9 @@
       <alignmentY value="0.0"/>
       <background color="-16777216"/>
       <foreground color="-1"/>
-      <maximumSize width="300" height="400"/>
+      <maximumSize width="600" height="800"/>
       <minimumSize width="300" height="400"/>
-      <preferredSize width="300" height="400"/>
+      <preferredSize width="600" height="800"/>
     </properties>
     <border type="none"/>
     <children>

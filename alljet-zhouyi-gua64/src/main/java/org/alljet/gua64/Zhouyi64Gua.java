@@ -122,7 +122,7 @@ public class Zhouyi64Gua {
             askRight = 0;
             askWrong = 0;
             totalScore = 0;
-            index = 10;
+            index = 0;
             ansStr = "";
             return;
         }
